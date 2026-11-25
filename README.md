@@ -137,4 +137,10 @@ ANN
 
 The ANN model achieved high accuracy in classifying breast cancer cases.
 
+	precision	recall	f1-score	support
+0	0.985915	0.985915	0.985915	71.000000
+1	0.976744	0.976744	0.976744	43.000000
+accuracy	0.982456	0.982456	0.982456	0.982456
+macro avg	0.981330	0.981330	0.981330	114.000000
+weighted avg	0.982456	0.982456	0.982456	114.000000
 
