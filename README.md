@@ -137,10 +137,53 @@ ANN
 
 The ANN model achieved high accuracy in classifying breast cancer cases.
 
-	precision	recall	f1-score	support
-0	0.985915	0.985915	0.985915	71.000000
-1	0.976744	0.976744	0.976744	43.000000
-accuracy	0.982456	0.982456	0.982456	0.982456
-macro avg	0.981330	0.981330	0.981330	114.000000
-weighted avg	0.982456	0.982456	0.982456	114.000000
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>precision</th>
+      <th>recall</th>
+      <th>f1-score</th>
+      <th>support</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>0.985915</td>
+      <td>0.985915</td>
+      <td>0.985915</td>
+      <td>71.000000</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>0.976744</td>
+      <td>0.976744</td>
+      <td>0.976744</td>
+      <td>43.000000</td>
+    </tr>
+    <tr>
+      <th>accuracy</th>
+      <td>0.982456</td>
+      <td>0.982456</td>
+      <td>0.982456</td>
+      <td>0.982456</td>
+    </tr>
+    <tr>
+      <th>macro avg</th>
+      <td>0.981330</td>
+      <td>0.981330</td>
+      <td>0.981330</td>
+      <td>114.000000</td>
+    </tr>
+    <tr>
+      <th>weighted avg</th>
+      <td>0.982456</td>
+      <td>0.982456</td>
+      <td>0.982456</td>
+      <td>114.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
 
