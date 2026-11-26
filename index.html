@@ -1,0 +1,99 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Breast Cancer Detection</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f5f9;
+            text-align: center;
+            padding: 30px;
+        }
+
+        .container {
+            background: white;
+            max-width: 750px;
+            margin: auto;
+            padding: 25px;
+            border-radius: 12px;
+        }
+
+        .field {
+            text-align: left;
+            margin: 12px 0;
+        }
+
+        input {
+            width: 95%;
+            padding: 10px;
+            margin-top: 5px;
+        }
+
+        button {
+            background: #1769aa;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .result {
+            margin-top: 25px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Breast Cancer Detection System</h1>
+
+    <p>
+        Enter the 30 diagnostic features
+        to predict the tumour classification.
+    </p>
+
+    <form action="/predict" method="POST">
+
+        {% for feature in features %}
+        {% set i = loop.index0 %}
+
+        <div class="field">
+            <label>{{ feature }}</label>
+            <input
+                type="number"
+                step="any"
+                name="feature_{{ i }}"
+                required
+            >
+        </div>
+
+        {% endfor %}
+
+        <button type="submit">Predict</button>
+
+    </form>
+
+    {% if prediction %}
+    <div class="result">
+        Prediction: {{ prediction }}
+        <p>Model output: {{ probability }}%</p>
+    </div>
+    {% endif %}
+
+    {% if error %}
+    <div class="result">
+        {{ error }}
+    </div>
+    {% endif %}
+
+</div>
+
+</body>
+</html>
